@@ -1,0 +1,39 @@
+Dataset:
+
+Menggunakan dataset batik Indonesia (mirip dengan yang diambil dari Kaggle).
+
+Dataset dibagi otomatis menjadi 80% training dan 20% validation dengan splitfolders.
+
+Preprocessing:
+
+Resize citra ke 224×224 piksel.
+
+Normalisasi nilai pixel (rescale=1./255).
+
+Augmentasi citra dengan rotation_range, zoom_range, dan horizontal_flip untuk memperkaya variasi data.
+
+Model:
+
+Menggunakan Transfer Learning dengan arsitektur VGG16.
+
+Menambahkan layer fully connected (Dense, Dropout, Softmax) untuk klasifikasi akhir.
+
+Optimizer: Adam (learning_rate=0.0001).
+
+Fungsi loss: categorical_crossentropy.
+
+Training:
+
+Epoch 50.
+
+Batch size 32.
+
+Evaluasi menggunakan accuracy dan val_accuracy.
+
+Evaluasi:
+
+Hasil pelatihan divisualisasikan (akurasi & loss).
+
+Model disimpan (model_batik_vgg16.h5).
+
+Uji prediksi dilakukan dengan gambar baru + confusion matrix + precision, recall, dan F1-score.

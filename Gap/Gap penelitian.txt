@@ -1,0 +1,29 @@
+Optimalisasi Akurasi dengan Transfer Learning:
+
+- Paper acuan hanya memakai CNN konvensional dengan akurasi 25,5%.
+
+- Sedangkan penelitian ini memakai VGG16 pre-trained dan menghasilkan akurasi yang jauh lebih tinggi karena memanfaatkan fitur umum dari ImageNet.
+
+Pemanfaatan Data Augmentasi:
+
+- Paper acuan tidak melakukan augmentasi.
+
+- Penelitian ini menambahkan augmentasi untuk memperbanyak variasi dataset dan mengurangi overfitting.
+
+Optimasi Training:
+
+- Paper menggunakan epoch tinggi (200) dengan hasil belum stabil.
+
+- Penelitian ini menggunakan 50 epoch, juga menggunakan Adam Optimizer dan bisa menambahkan callbacks (early stopping, learning rate scheduler) untuk konvergensi lebih cepat.
+
+Evaluasi Model Lebih Lengkap:
+
+- Paper hanya menggunakan metrik akurasi.
+
+- Penelitian ini menambahkan confusion matrix, precision, recall, F1-score, sehingga hasil evaluasi lebih komprehensif.
+
+Efisiensi Waktu dan Komputasi:
+
+- CNN dari nol membutuhkan waktu training lama.
+
+- Transfer learning (VGG16) mempersingkat waktu training tanpa kehilangan performa.
